@@ -10,25 +10,6 @@ I have been getting some of my vintage servers and workstations back up and runn
 **IBM PC Server 720 (loki)**
 Since this machine has 4 Pentium CPUs runing on the Corrollary SMP bus, (and not to mention the MCA cards) most distros will not support more than 1 CPU. I tried to install OS2 (version 2, 3, Warp) but with the IBMServRAID cards could never get it working even though IBM still has information on their website that says how to do it. It doesn't work. 
 
-Solaris 2.6 i386 works and sees all the CPUs:
-$ /usr/sbin/psrinfo -v
-Status of processor 0 as of: 04/06/25 13:29:53
-  Processor has been on-line since 04/06/25 12:51:40.
-  The i386 processor operates at 100 MHz,
-        and has an i387 compatible floating point processor.
-Status of processor 1 as of: 04/06/25 13:29:53
-  Processor has been on-line since 04/06/25 12:51:40.
-  The i386 processor operates at 100 MHz,
-        and has an i387 compatible floating point processor.
-Status of processor 2 as of: 04/06/25 13:29:53
-  Processor has been on-line since 04/06/25 12:51:40.
-  The i386 processor operates at 100 MHz,
-        and has an i387 compatible floating point processor.
-Status of processor 3 as of: 04/06/25 13:29:53
-  Processor has been on-line since 04/06/25 12:51:40.
-  The i386 processor operates at 100 MHz,
-        and has an i387 compatible floating point processor.
-
 **Sun SparcStation 2 (shelob)**
 I wanted to install either NetBSD or NextStep on it but no matter which CDROM I used couldn't get them to boot. So decided to try out SunOS 4.1.4 but relized really quickly that it was way too ancient and getting it on the network and installing useful software on it would be a big undertaking so went with Solaris 2.6 SPARC. 
 NOTE: The LEO graphics card is not well or if at all supported on SS2 machines. Switch to a CG3 or CG6 card to save yourself the hassle.
