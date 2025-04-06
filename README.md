@@ -7,6 +7,7 @@ https://ludd.ltu.se/~ragge/htdocs/Documentation/pkgsrc/platforms.html
 
 Background
 I have been getting some of my vintage servers and workstations back up and running. I have 2 machines that will not support running NetBSD or other Opensource distros. These machines are:
+
 **IBM PC Server 720 (loki)**
 Since this machine has 4 Pentium CPUs runing on the Corrollary SMP bus, (and not to mention the MCA cards) most distros will not support more than 1 CPU. I tried to install OS2 (version 2, 3, Warp) but with the IBMServRAID cards could never get it working even though IBM still has information on their website that says how to do it. It doesn't work. 
 
