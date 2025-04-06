@@ -55,5 +55,7 @@ Step by step
 8. cd pkgsrc/bootstrap
 9. Time to build:
 10.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
-11.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
-12. TBD... still trying to get the bootstrap builds to work
+11.     tried this as it failed a couple times and installed sed and gawk pacakages:
+12.     ./bootstrap --prefix=/usr/pkg --compiler=gcc --make-jobs=1 --pkgdbdir=/usr/pkg/pkgdb
+13.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
+14. TBD... still trying to get the bootstrap builds to work
