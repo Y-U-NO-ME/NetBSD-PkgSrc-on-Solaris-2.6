@@ -72,4 +72,4 @@ Step by step
 9. Time to build:
 10.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
 11.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
-12. 
+12. TBD... still trying to get the bootstrap builds to work
