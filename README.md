@@ -17,21 +17,21 @@ NOTE: The LEO graphics card is not well or if at all supported on SS2 machines. 
 
 **On with my notes.**
 These are the packages that are needed and I used to build the pkgsrc bootstrap bmake:
-bison-1.25-local                  
-gcc-3.4.6-sol26-sparc-local      
-make-3.82-sol26-sparc-local       
-tar-1.23-sol26-sparc-local
-gzip-1.2.4-sol26-sparc-local      
-wget-1.7-sol2.6-sparc-local
-perl-5.005_03-sol26-sparc-local
+1. bison-1.25-local
+2. gcc-3.4.6-sol26-sparc-local **(this failed with ERROR: /usr/local/include/c++/3.4.6/sparc-sun-solaris2.6/bits/stdc++.h.gch/O0g file cksum <61659> expected <61787> actual so I renamed it to 00g.org)**
+3. make-3.82-sol26-sparc-local
+4. tar-1.23-sol26-sparc-local
+5. gzip-1.2.4-sol26-sparc-local
+6. wget-1.7-sol2.6-sparc-local
+7. perl-5.005_03-sol26-sparc-local
 
 Since I wanted to use bash and screen so I could disconnect/reconnect to the remote screen, I also installed these:
-libintl-3.4.0-sol26-sparc-local
-bash-2.05-sol26-sparc-local       
-libiconv-1.8-sol26-sparc-local.gz 
-screen-4.0.3-sol26-sparc-local
-ncurses-5.7-sol26-sparc-local
-libiconv-1.8-sol26-sparc-local 
+1. libintl-3.4.0-sol26-sparc-local
+2. bash-2.05-sol26-sparc-local
+3. libiconv-1.8-sol26-sparc-local.gz
+4. screen-4.0.3-sol26-sparc-local
+5. ncurses-5.7-sol26-sparc-local
+6. libiconv-1.8-sol26-sparc-local 
 
 Solaris 2.6 SPARC local packages are starting to get difficult to find in 2025. Someone has downloaded and submitted the old sunfreeware to Archive.org:
 https://archive.org/details/sunfreeware-sol-26
