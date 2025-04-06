@@ -18,7 +18,7 @@ NOTE: The LEO graphics card is not well or if at all supported on SS2 machines. 
 **On with my notes.**
 These are the packages that are needed and I used to build the pkgsrc bootstrap bmake:
 1. bison-1.25-local
-2. gcc-3.4.6-sol26-sparc-local **(this failed with ERROR: /usr/local/include/c++/3.4.6/sparc-sun-solaris2.6/bits/stdc++.h.gch/O0g file cksum <61659> expected <61787> actual so I renamed it to 00g.org)**
+2. gcc-3.4.6-sol26-sparc-local **(this failed with ERROR: /usr/local/include/c++/3.4.6/sparc-sun-solaris2.6/bits/stdc++.h.gch/O0g file cksum <61659> expected <61787> actual so I renamed it to 00g.org as GCC will fall back to compiling the header from source as needed.)**
 3. make-3.82-sol26-sparc-local
 4. tar-1.23-sol26-sparc-local
 5. gzip-1.2.4-sol26-sparc-local
