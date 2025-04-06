@@ -24,6 +24,8 @@ These are the packages that are needed and I used to build the pkgsrc bootstrap 
 5. gzip-1.2.4-sol26-sparc-local
 6. wget-1.7-sol2.6-sparc-local
 7. perl-5.005_03-sol26-sparc-local
+8. gawk-3.1.8-sol26-sparc-local
+9. sed-4.2.1-sol26-sparc-local
 
 Since I wanted to use bash and screen so I could disconnect/reconnect to the remote screen, I also installed these:
 1. libintl-3.4.0-sol26-sparc-local
