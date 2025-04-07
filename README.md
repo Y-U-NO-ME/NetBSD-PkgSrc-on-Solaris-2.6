@@ -27,7 +27,6 @@ These are the packages that are needed and I used to build the pkgsrc bootstrap 
 8. gawk-3.1.8-sol26-sparc-local
 9. sed-4.2.1-sol26-sparc-local
 10. libsigsegv-2.6-sol26-sparc-local
-11. mpfr-3.1.4-1.tgc-sunos5.6-i386-tgcware
 12. libgomp1-4.3.6-2.tgc-sunos5.6-i386-tgcware
 13. gawk-4.0.2-2.tgc-sunos5.6-i386-tgcware
 
@@ -60,9 +59,12 @@ Step by step
 8. wget --no-cert https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz
 9. (This will take awhile. On my SS2 it took over night and even on the PC Server 720 took hours) tar -xvzf ./pkgsrc.tar.gz
 10. cd pkgsrc/bootstrap
-11. Time to build:
-12.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
-13.     tried this as it failed a couple times and installed sed and gawk pacakages:
-14.     ./bootstrap --prefix=/usr/pkg --compiler=gcc --make-jobs=1 --pkgdbdir=/usr/pkg/pkgdb
-15.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
-16. TBD... still trying to get the bootstrap builds to work
+11. Add these to your build flags:
+      export CPPFLAGS="-I/usr/local/include -I/usr/tgcware/include"
+      export CFLAGS="-I/usr/local/include -I/usr/tgcware/include"
+12. Time to build:
+13.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
+14.     tried this as it failed a couple times and installed sed and gawk pacakages:
+15.     ./bootstrap --prefix=/usr/pkg --compiler=gcc --make-jobs=1 --pkgdbdir=/usr/pkg/pkgdb
+16.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
+17. TBD... still trying to get the bootstrap builds to work
