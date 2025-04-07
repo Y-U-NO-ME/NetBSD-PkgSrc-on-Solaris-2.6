@@ -27,6 +27,10 @@ These are the packages that are needed and I used to build the pkgsrc bootstrap 
 8. gawk-3.1.8-sol26-sparc-local
 9. sed-4.2.1-sol26-sparc-local
 10. libsigsegv-2.6-sol26-sparc-local
+11. mpfr-3.1.4-1.tgc-sunos5.6-i386-tgcware
+12. libgomp1-4.3.6-2.tgc-sunos5.6-i386-tgcware
+13. gawk-4.0.2-2.tgc-sunos5.6-i386-tgcware
+
 
 Since I wanted to use bash and screen so I could disconnect/reconnect to the remote screen, I also installed these:
 1. libintl-3.4.0-sol26-sparc-local
@@ -47,17 +51,18 @@ I am uploading both the SPARC and i386 packages here for safe keeping.
 
 Step by step
 1. mv /usr/ccs/bin/as and /usr/ccs/bin/make to as.ccs and make.css -- just makes things so much easier to take out the default borked Sun versions of these out of the mix.
-2. Download all the packages for your arch either from here or from the links above.
-3. cd into that folder and run "pkgadd -d <name_of_package>"
-4. With the SPARC packages, they will be installed to /usr/local. On the TGZ packages they will be installed to /usr/tgz.
-5. Add those paths to your path: export PATH=/usr/local/bin:$PATH (for SPARC) or export PATH=/usr/tgz/bin:$PATH (for i386)
-6. On SPARC, cd to /usr/local/, on i386 cd to /usr
-7. wget --no-cert https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz
-8. (This will take awhile. On my SS2 it took over night and even on the PC Server 720 took hours) tar -xvzf ./pkgsrc.tar.gz
-9. cd pkgsrc/bootstrap
-10. Time to build:
-11.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
-12.     tried this as it failed a couple times and installed sed and gawk pacakages:
-13.     ./bootstrap --prefix=/usr/pkg --compiler=gcc --make-jobs=1 --pkgdbdir=/usr/pkg/pkgdb
-14.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
-15. TBD... still trying to get the bootstrap builds to work
+2. if your package did not create a ln -s from gawk to awk, do that.
+3. Download all the packages for your arch either from here or from the links above.
+4. cd into that folder and run "pkgadd -d <name_of_package>"
+5. With the SPARC packages, they will be installed to /usr/local. On the TGZ packages they will be installed to /usr/tgz.
+6. Add those paths to your path: export PATH=/usr/local/bin:$PATH (for SPARC) or export PATH=/usr/tgz/bin:$PATH (for i386)
+7. On SPARC, cd to /usr/local/, on i386 cd to /usr
+8. wget --no-cert https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz
+9. (This will take awhile. On my SS2 it took over night and even on the PC Server 720 took hours) tar -xvzf ./pkgsrc.tar.gz
+10. cd pkgsrc/bootstrap
+11. Time to build:
+12.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
+13.     tried this as it failed a couple times and installed sed and gawk pacakages:
+14.     ./bootstrap --prefix=/usr/pkg --compiler=gcc --make-jobs=1 --pkgdbdir=/usr/pkg/pkgdb
+15.   i386: ./bootstrap --prefix=/usr/local --abi=32 --compiler=gcc
+16. TBD... still trying to get the bootstrap builds to work
