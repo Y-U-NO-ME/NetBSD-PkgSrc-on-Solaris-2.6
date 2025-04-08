@@ -73,9 +73,9 @@ Step by step
 8. wget --no-cert https://ftp.netbsd.org/pub/pkgsrc/current/pkgsrc.tar.gz
 9. (This will take awhile. On my SS2 it took over night and even on the PC Server 720 took hours) tar -xvzf ./pkgsrc.tar.gz
 10. cd pkgsrc/bootstrap
-11. Add these to your build flags:
-      export CPPFLAGS="-I/usr/local/include -I/usr/tgcware/include"
-      export CFLAGS="-I/usr/local/include -I/usr/tgcware/include"
+11. A lot of the issues with the build might have something to do with sstdint.h nd which ones is found. If you have problems, you can try creating the file itself and then adding these to your build flags:
+      export CPPFLAGS="-I/usr/local/include" {SPARv} or  "-I/usr/tgcware/include" {i386}
+      export CFLAGS="-I/usr/local/include" {SPARC} or  "-I/usr/tgcware/include" {i386}
 12. Time to build:
 13.   SPARC: ./bootstrap --prefix=/usr/pkg --abi=32
 14.     tried this as it failed a couple times and installed sed and gawk pacakages:
