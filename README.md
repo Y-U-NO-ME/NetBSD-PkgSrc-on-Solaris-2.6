@@ -16,7 +16,7 @@ I wanted to install either NetBSD or NextStep on it but no matter which CDROM I 
 NOTE: The LEO graphics card is not well or if at all supported on SS2 machines. Switch to a CG3 or CG6 card to save yourself the hassle.
 
 **On with my notes.**
-These are the packages that are needed and I used to build the pkgsrc bootstrap bmake:
+These are the packages that are needed and I used to build the pkgsrc bootstrap:
 1. bison-1.25-local
 2. gcc-3.4.6-sol26-sparc-local **(this failed with ERROR: /usr/local/include/c++/3.4.6/sparc-sun-solaris2.6/bits/stdc++.h.gch/O0g file cksum <61659> expected <61787> actual so I renamed it to 00g.org as GCC will fall back to compiling the header from source as needed.)**
 3. make-3.82-sol26-sparc-local
@@ -47,6 +47,13 @@ For Solaris 2.6 i386 I was unable to find the old sunfreeware locations so went 
 https://jupiterrise.com/tgcware/tgcware.solaris.html
 
 I am uploading both the SPARC and i386 packages here for safe keeping.
+
+**NOTE**: I spent a lot of time trying to get pkgsrc-current bootstrapped but couldn't get past the awk compile. I switched to an older version "pkgsrc-2019Q4 as it seemed like the best last version to support Solaris 2.6 without major patching. 
+
+On my Linux machine, I did the cvs checkout and then tar.gz the folder to place on the Solaris boxes.
+      export CVS_RSH=ssh
+      export CVSROOT="anoncvs@anoncvs.netbsd.org:/cvsroot"
+      cvs -z3 checkout -r pkgsrc-2019Q4 -P pkgsrc
 
 Step by step
 1. mv /usr/ccs/bin/as and /usr/ccs/bin/make to as.ccs and make.css -- just makes things so much easier to take out the default borked Sun versions of these out of the mix.
