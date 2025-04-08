@@ -51,6 +51,7 @@ I am uploading both the SPARC and i386 packages here for safe keeping.
 **NOTE**: I spent a lot of time trying to get pkgsrc-current bootstrapped but couldn't get past the awk compile. I switched to an older version "pkgsrc-2019Q4 as it seemed like the best last version to support Solaris 2.6 without major patching. 
 
 On my Linux machine, I did the cvs checkout and then tar.gz the folder to place on the Solaris boxes.
+      
       export CVS_RSH=ssh
       export CVSROOT="anoncvs@anoncvs.netbsd.org:/cvsroot"
       cvs -z3 checkout -r pkgsrc-2019Q4 -P pkgsrc
