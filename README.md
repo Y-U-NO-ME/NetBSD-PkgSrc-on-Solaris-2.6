@@ -19,16 +19,22 @@ NOTE: The LEO graphics card is not well or if at all supported on SS2 machines. 
 These are the packages that are needed and I used to build the pkgsrc bootstrap:
 1. bison-1.25-local
 2. gcc-3.4.6-sol26-sparc-local **(this failed with ERROR: /usr/local/include/c++/3.4.6/sparc-sun-solaris2.6/bits/stdc++.h.gch/O0g file cksum <61659> expected <61787> actual so I renamed it to 00g.org as GCC will fall back to compiling the header from source as needed.)**
-3. make-3.82-sol26-sparc-local
-4. tar-1.23-sol26-sparc-local
-5. gzip-1.2.4-sol26-sparc-local
-6. wget-1.7-sol2.6-sparc-local
-7. perl-5.005_03-sol26-sparc-local
-8. gawk-3.1.8-sol26-sparc-local
-9. sed-4.2.1-sol26-sparc-local
-10. libsigsegv-2.6-sol26-sparc-local
-12. libgomp1-4.3.6-2.tgc-sunos5.6-i386-tgcware
-13. gawk-4.0.2-2.tgc-sunos5.6-i386-tgcware
+1. binutils-2.20.1
+2. bison-1.25-sol26
+3. gawk-3.1.8-sol26
+4. gcc-3.4.6-sol26
+5. gzip-1.2.4-sol26
+6. libiconv-1.8-sol26
+7. libintl-3.4.0-sol26
+8. libsigsegv-2.6-sol26
+9. make-3.82-sol26
+10. ncurses-5.7-sol26
+11. perl-5.005_03-sol26
+12. screen-4.0.3-sol26
+13. sed-4.2.1-sol26
+14. tar-1.23-sol26
+15. wget-1.7-sol26
+16. zlib-1.2.5-sol26
 
 
 Since I wanted to use bash and screen so I could disconnect/reconnect to the remote screen, I also installed these:
